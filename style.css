@@ -1,0 +1,42 @@
+#square {
+  /* --size: 50px; */
+  --speed: 300ms;
+  width: var(--size);
+  height: var(--size);
+  background: black;
+  border: calc(var(--size) / 10) double hotpink;
+  box-sizing: border-box;
+
+  &.transit {
+    transition: var(--speed);
+  }
+  
+  &.right0 {
+    transform-origin: bottom right;
+  }
+  
+  &.right1 {
+    rotate: 90deg;
+  }
+  
+  &.left0 {
+    transform-origin: bottom left;
+  }
+  
+  &.left1 {
+    rotate: -90deg;
+  }
+  
+  &.down0 {
+    transform-origin: top;
+  }
+  
+  &.down1, &.up1 {
+    scale: 0.5 2;
+    /* border-radius: 40%; */
+  }
+  
+  &.up0 {
+    transform-origin: bottom;
+  }
+}
